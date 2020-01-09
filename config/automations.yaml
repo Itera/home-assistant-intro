@@ -1,0 +1,8 @@
+- alias: Calculate optimal temperature
+  id: run power_price_temp_optimizer
+  trigger:
+    - platform: time_pattern
+      minutes: "/3"
+  action:
+    - delay: '00:02:30'
+    - service: python_script.power_price_temp_optimizer
