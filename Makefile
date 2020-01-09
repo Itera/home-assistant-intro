@@ -2,7 +2,7 @@
 
 all: install start
 
-install: ; docker run --init -d --name="home-assistant" -e "TZ=Norway/Oslo" -v $$PWD/config\:/config --net=host homeassistant/home-assistant\:stable
+install: ; docker run --init -d --name="home-assistant" -e "TZ=Europe/Oslo" -v $$PWD/config\:/config --net=host homeassistant/home-assistant\:stable
 
 start: ; docker start home-assistant
 
